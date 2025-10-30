@@ -1,0 +1,165 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Bluetooth Headphones",
+      "price": 2499,
+      "category": "Electronics",
+      "description": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Smartwatch Pro X",
+      "price": 5999,
+      "category": "Electronics",
+      "description": "Feature-rich smartwatch with heart rate monitor, GPS, and AMOLED display.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Men’s Casual Cotton Shirt",
+      "price": 999,
+      "category": "Fashion",
+      "description": "Comfortable and stylish cotton shirt suitable for all occasions.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Women’s Leather Handbag",
+      "price": 2999,
+      "category": "Fashion",
+      "description": "Elegant and spacious handbag made from genuine leather.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Gaming Mouse RGB",
+      "price": 1299,
+      "category": "Electronics",
+      "description": "Ergonomic gaming mouse with RGB lighting and programmable buttons.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Stainless Steel Water Bottle",
+      "price": 699,
+      "category": "Home & Kitchen",
+      "description": "Durable insulated bottle that keeps your drinks hot or cold for hours.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Running Shoes",
+      "price": 2499,
+      "category": "Sportswear",
+      "description": "Lightweight running shoes with cushioned soles for maximum comfort.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Yoga Mat",
+      "price": 999,
+      "category": "Sportswear",
+      "description": "Eco-friendly yoga mat with non-slip surface and excellent grip.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Ceramic Coffee Mug Set",
+      "price": 799,
+      "category": "Home & Kitchen",
+      "description": "Set of 4 stylish ceramic coffee mugs perfect for everyday use.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Wooden Study Table",
+      "price": 5499,
+      "category": "Furniture",
+      "description": "Compact wooden study table with modern design and durable finish.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 11,
+      "title": "LED Desk Lamp",
+      "price": 1299,
+      "category": "Home & Lighting",
+      "description": "Adjustable LED desk lamp with 3 brightness levels and touch control.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Wireless Keyboard and Mouse Combo",
+      "price": 1999,
+      "category": "Electronics",
+      "description": "Compact wireless keyboard and mouse combo for smooth productivity.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Noise Cancelling Earbuds",
+      "price": 3499,
+      "category": "Electronics",
+      "description": "True wireless earbuds with deep bass and active noise cancellation.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Stainless Steel Cookware Set",
+      "price": 4599,
+      "category": "Home & Kitchen",
+      "description": "5-piece stainless steel cookware set suitable for induction and gas stoves.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Women’s Sports T-Shirt",
+      "price": 899,
+      "category": "Fashion",
+      "description": "Breathable sports t-shirt designed for gym and outdoor workouts.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Laptop Backpack",
+      "price": 1799,
+      "category": "Accessories",
+      "description": "Water-resistant backpack with padded laptop compartment and USB charging port.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Tabletop Plant Decor",
+      "price": 499,
+      "category": "Home Decor",
+      "description": "Beautiful artificial plant with ceramic pot to enhance your workspace.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Men’s Leather Wallet",
+      "price": 1199,
+      "category": "Accessories",
+      "description": "Premium leather wallet with multiple card slots and coin pocket.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Bluetooth Portable Speaker",
+      "price": 2399,
+      "category": "Electronics",
+      "description": "Compact Bluetooth speaker with deep bass and long-lasting battery.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Office Chair Ergonomic",
+      "price": 7999,
+      "category": "Furniture",
+      "description": "Ergonomic office chair with lumbar support and adjustable height.",
+      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    }
+  ],
+  "cart": []
+}

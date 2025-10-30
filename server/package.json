@@ -1,0 +1,16 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Samarpan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generator": "json-server --watch db.json -p 9999"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
