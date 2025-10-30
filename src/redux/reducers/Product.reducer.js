@@ -3,14 +3,26 @@ import ApiManager from "../../utils/ApiManager";
 
 export const getAllProducts = createAsyncThunk(
   "/products",
-  async (_, { errorObj }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const res = await ApiManager("/products");
-      const data = await res.data;
-      return data;
+      return res.data;
     } catch (error) {
       alert("Product Reducer:", error.message);
-      return errorObj(error);
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const productInfo = createAsyncThunk(
+  "/product/productInfo",
+  async (id, { rejectWithValue }) => {
+    try {
+      const res = await ApiManager.get(`/products/${id}`);
+      return res.data;
+    } catch (error) {
+      alert("Product reducer", error.message);
+      return rejectWithValue(error);
     }
   }
 );

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Error from "../components/Error";
 import App from "../App";
 import CartPage from "../pages/CartPage";
+import ViewProduct from "../pages/ViewProduct";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,11 @@ const router = createBrowserRouter([
             {
                 index: true, element: <App />
             },
+            {
+                path: '/product/:id', element: <ViewProduct />
+            },
+
+            
             {
                 path: '/cart', element: <CartPage />
             }
