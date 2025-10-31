@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Wireless Bluetooth Headphones",
       "price": 2499,
       "category": "Electronics",
@@ -9,7 +9,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Smartwatch Pro X",
       "price": 5999,
       "category": "Electronics",
@@ -17,7 +17,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Men’s Casual Cotton Shirt",
       "price": 999,
       "category": "Fashion",
@@ -25,7 +25,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Women’s Leather Handbag",
       "price": 2999,
       "category": "Fashion",
@@ -33,7 +33,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Gaming Mouse RGB",
       "price": 1299,
       "category": "Electronics",
@@ -41,7 +41,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Stainless Steel Water Bottle",
       "price": 699,
       "category": "Home & Kitchen",
@@ -49,7 +49,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Running Shoes",
       "price": 2499,
       "category": "Sportswear",
@@ -57,7 +57,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Yoga Mat",
       "price": 999,
       "category": "Sportswear",
@@ -65,7 +65,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Ceramic Coffee Mug Set",
       "price": 799,
       "category": "Home & Kitchen",
@@ -73,7 +73,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Wooden Study Table",
       "price": 5499,
       "category": "Furniture",
@@ -81,7 +81,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "LED Desk Lamp",
       "price": 1299,
       "category": "Home & Lighting",
@@ -89,7 +89,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Wireless Keyboard and Mouse Combo",
       "price": 1999,
       "category": "Electronics",
@@ -97,7 +97,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Noise Cancelling Earbuds",
       "price": 3499,
       "category": "Electronics",
@@ -105,7 +105,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Stainless Steel Cookware Set",
       "price": 4599,
       "category": "Home & Kitchen",
@@ -113,7 +113,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Women’s Sports T-Shirt",
       "price": 899,
       "category": "Fashion",
@@ -121,7 +121,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Laptop Backpack",
       "price": 1799,
       "category": "Accessories",
@@ -129,7 +129,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Tabletop Plant Decor",
       "price": 499,
       "category": "Home Decor",
@@ -137,7 +137,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Men’s Leather Wallet",
       "price": 1199,
       "category": "Accessories",
@@ -145,7 +145,7 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Bluetooth Portable Speaker",
       "price": 2399,
       "category": "Electronics",
@@ -153,12 +153,20 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Office Chair Ergonomic",
       "price": 7999,
       "category": "Furniture",
       "description": "Ergonomic office chair with lumbar support and adjustable height.",
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+    },
+    {
+      "id": "f910",
+      "title": "A",
+      "price": "1",
+      "category": "B",
+      "description": "dkadkapod",
+      "image": "doapsda[pda[pd"
     }
   ],
   "cart": []

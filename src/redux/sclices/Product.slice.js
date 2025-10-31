@@ -1,5 +1,9 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { getAllProducts, productInfo } from "../reducers/Product.reducer";
+import {
+  getAllProducts,
+  productInfo,
+  createProductAPI,
+} from "../reducers/Product.reducer";
 
 const ProductSlice = createSlice({
   name: "product",
@@ -11,7 +15,7 @@ const ProductSlice = createSlice({
     errorMsg: "",
   },
   reducers: {
-    createProduct: (state, action) => {
+    createProductLocal: (state, action) => {
       const product = { id: nanoid(), ...action.payload };
       state.products.push(product);
     },
@@ -53,8 +57,28 @@ const ProductSlice = createSlice({
         state.isLoading = false;
         state.products = [];
       });
+
+    builder.addCase(createProductAPI.pending, (state) => {
+      state.isLoading = true;
+      state.isError = false;
+      state.errorMsg = "";
+      state.products = [];
+      state.product = {};
+    }),
+      builder.addCase(createProductAPI.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.errorMsg = "";
+        state.product = action.payload;
+      }),
+      builder.addCase(createProductAPI.rejected, (state, action) => {
+        state.isError = true;
+        state.errorMsg = action.error.message;
+        state.isLoading = false;
+        state.products = [];
+      });
   },
 });
 
-export const { createProduct } = ProductSlice.actions;
+export const { createProductLocal } = ProductSlice.actions;
 export default ProductSlice.reducer;

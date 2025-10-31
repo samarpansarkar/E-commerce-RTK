@@ -26,3 +26,16 @@ export const productInfo = createAsyncThunk(
     }
   }
 );
+
+export const createProductAPI = createAsyncThunk(
+  "/product/createProduct",
+  async (formData, { rejectWithValue }) => {
+    try {
+      const res = ApiManager.post("/products", formData);
+      return res.data;
+    } catch (error) {
+      alert("Product Reducer", error.message);
+      rejectWithValue(error.message);
+    }
+  }
+);
