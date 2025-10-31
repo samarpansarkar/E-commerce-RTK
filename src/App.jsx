@@ -5,6 +5,7 @@ import { TEXT } from "./constants/Constants";
 import Loader from "./components/Loader";
 import Card from "./components/Card";
 import { useOutletContext } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const App = () => {
   const { theme } = useOutletContext();
@@ -14,7 +15,11 @@ const App = () => {
   console.log({ products, isLoading, isError, errorMsg });
 
   useEffect(() => {
-    dispatch(getAllProducts())
+    dispatch(getAllProducts()).then(() => {
+      toast.success("Products fetched successfully!")
+    }).catch((err) => {
+      toast.error("Failed to fetch products: " + err.message)
+    });
   }, [dispatch])
 
   return (

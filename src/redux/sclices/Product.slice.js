@@ -3,6 +3,7 @@ import {
   getAllProducts,
   productInfo,
   createProductAPI,
+  deleteProductAPI,
 } from "../reducers/Product.reducer";
 
 const ProductSlice = createSlice({
@@ -18,6 +19,10 @@ const ProductSlice = createSlice({
     createProductLocal: (state, action) => {
       const product = { id: nanoid(), ...action.payload };
       state.products.push(product);
+    },
+    deleteProductLocal: (state, action) => {
+      const productId = action.payload;
+      state.products = state.products.filter((p) => p.id !== productId);
     },
   },
   extraReducers: (builder) => {
@@ -77,8 +82,26 @@ const ProductSlice = createSlice({
         state.isLoading = false;
         state.products = [];
       });
+
+    builder.addCase(deleteProductAPI.pending, (state) => {
+      state.isLoading = true;
+      state.isError = false;
+      state.errorMsg = "";
+    }),
+      builder.addCase(deleteProductAPI.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.errorMsg = "";
+        // const deletedId = action.payload.id;  //! I dont use this filter method here because I crate a local delete product reducer and it handle the ui part. This comment is not form chatGPT or any other AI.
+        // state.products = state.products.filter((p) => p.id !== deletedId);
+      }),
+      builder.addCase(deleteProductAPI.rejected, (state, action) => {
+        state.isError = true;
+        state.errorMsg = action.error.message;
+        state.isLoading = false;
+      });
   },
 });
 
-export const { createProductLocal } = ProductSlice.actions;
+export const { createProductLocal, deleteProductLocal } = ProductSlice.actions;
 export default ProductSlice.reducer;

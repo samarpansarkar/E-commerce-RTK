@@ -31,11 +31,24 @@ export const createProductAPI = createAsyncThunk(
   "/product/createProduct",
   async (formData, { rejectWithValue }) => {
     try {
-      const res = ApiManager.post("/products", formData);
+      const res = await ApiManager.post("/products", formData);
       return res.data;
     } catch (error) {
       alert("Product Reducer", error.message);
-      rejectWithValue(error.message);
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const deleteProductAPI = createAsyncThunk(
+  "/product/deleteProduct",
+  async (id, { rejectWithValue }) => {
+    try {
+      const res = await ApiManager.delete(`/products/${id}`);
+      return res.data;
+    } catch (error) {
+      alert("Product Reducer", error.message);
+      return rejectWithValue(error.message);
     }
   }
 );

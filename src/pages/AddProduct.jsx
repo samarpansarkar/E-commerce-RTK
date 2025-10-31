@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom'
 import Input from '../components/UI/Input'
 import Button from '../components/UI/Button'
@@ -31,7 +31,7 @@ const AddProduct = () => {
         try {
 
             dispatch(createProductAPI(formData))
-            toast.success("Product added!!!")
+            toast.success("Product added successfully!!!")
             navigate("/")
         } catch (error) {
             toast.error("Something went wrong in adding product!!", error.message);
