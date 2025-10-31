@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { getAllProducts } from "./redux/reducers/Product.reducer";
 import { TEXT } from "./constants/Constants";
 import Loader from "./components/Loader";
-import Card from "./components/Card";
 import { useOutletContext } from "react-router-dom";
 import { toast } from "react-toastify";
+import Card from "./components/UI/Card";
 
 const App = () => {
   const { theme } = useOutletContext();

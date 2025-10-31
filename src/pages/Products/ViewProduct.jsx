@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
-import { deleteProductAPI, productInfo } from "../redux/reducers/Product.reducer";
-import Button from "../components/UI/Button";
-import { deleteProductLocal } from "../redux/sclices/Product.slice";
+import { deleteProductAPI, productInfo } from "../../redux/reducers/Product.reducer";
+import Button from "../../components/UI/Button";
+import { deleteProductLocal } from "../../redux/sclices/Product.slice";
 import { toast } from "react-toastify";
 
 const ViewProduct = () => {

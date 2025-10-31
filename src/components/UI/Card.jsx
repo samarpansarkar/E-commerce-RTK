@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import ProductDefImg from "../assets/ProductDefaultImg.png";
-import Button from "./UI/Button";
+import ProductDefImg from "../../assets/ProductDefaultImg.png";
+import Button from "./Button";
 
 const Card = ({ product, theme }) => {
     return (

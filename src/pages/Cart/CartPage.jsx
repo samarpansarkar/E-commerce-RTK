@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllCart } from '../redux/reducers/Cart.reducer'
+import { getAllCart } from '../../redux/reducers/Cart.reducer'
 
 const CartPage = () => {
     const dispatch = useDispatch()

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useOutletContext, useParams } from 'react-router-dom'
-import { productInfo, updateProductAPI } from '../redux/reducers/Product.reducer'
+import { productInfo, updateProductAPI } from '../../redux/reducers/Product.reducer'
 import { toast } from 'react-toastify'
-import Input from '../components/UI/Input'
-import Button from '../components/UI/Button'
-import Loader from '../components/Loader'
-import Error from '../components/Error'
+import Input from '../../components/UI/Input'
+import Button from '../../components/UI/Button'
+import Loader from '../../components/Loader'
+import Error from '../../components/Error'
 
 const UpdateProduct = () => {
     const { id } = useParams();

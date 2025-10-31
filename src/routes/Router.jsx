@@ -2,10 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Error from "../components/Error";
 import App from "../App";
-import CartPage from "../pages/CartPage";
-import ViewProduct from "../pages/ViewProduct";
-import AddProduct from "../pages/AddProduct";
-import UpdateProduct from "../pages/UpdateProduct";
+import CartPage from "../pages/Cart/CartPage";
+import UpdateProduct from "../pages/Products/UpdateProduct";
+import AddProduct from "../pages/Products/AddProduct";
+import ViewProduct from "../pages/Products/ViewProduct";
+
 
 const router = createBrowserRouter([
     {

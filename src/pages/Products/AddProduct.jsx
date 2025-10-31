@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom'
-import Input from '../components/UI/Input'
-import Button from '../components/UI/Button'
+import Input from '../../components/UI/Input'
+import Button from '../../components/UI/Button'
 import { useDispatch } from 'react-redux'
-import { createProductLocal } from '../redux/sclices/Product.slice'
-import { createProductAPI } from '../redux/reducers/Product.reducer'
+import { createProductLocal } from '../../redux/sclices/Product.slice'
+import { createProductAPI } from '../../redux/reducers/Product.reducer'
 import { toast } from 'react-toastify'
 
 const AddProduct = () => {
