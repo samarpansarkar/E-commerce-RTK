@@ -1,15 +1,44 @@
-import React from 'react'
+import React from "react";
 
-const Input = ({ name, type, value, placeholder, onChange }) => {
+const Input = ({ name, type = "text", value, placeholder, onChange, theme }) => {
+    const isDark = theme === "dark";
+
     return (
-        <div className="w-60 h-12 relative flex rounded-xl mb-2 md:mb-0">
-            <input type={type} value={value} id={name} onChange={onChange} name={name} required className="peer border border-gray-400 rounded px-3 pt-4 pb-2 w-full focus:outline-none focus:border-blue-600" />
-            <label htmlFor={name} className="absolute left-4 top-1/2 translate-y-[-50%]  px-2 font-light text-base text-gray-500
-           transition-all duration-150
-           peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-blue-600 peer-focus:bg-slate-100
-           peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-slate-600">{placeholder}</label>
-        </div>
-    )
-}
+        <div className="relative w-full max-w-sm">
+            <input
+                id={name}
+                name={name}
+                type={type}
+                value={value}
+                onChange={onChange}
+                required
+                placeholder=" "
+                className={`
+          peer w-full rounded-lg border-2 bg-transparent px-4 pt-5 pb-2 text-sm font-medium outline-none transition-all duration-300
+          ${isDark
+                        ? "border-gray-700 text-gray-100 focus:border-amber-400 focus:shadow-[0_0_10px_rgba(251,191,36,0.4)]"
+                        : "border-gray-300 text-gray-900 focus:border-amber-500 focus:shadow-[0_0_10px_rgba(245,158,11,0.3)]"}
+          ${value ? "border-amber-500" : ""}
+        `}
+            />
 
-export default Input
+            <label
+                htmlFor={name}
+                className={`
+          absolute left-4 text-gray-500 text-sm transition-all duration-300
+          ${value
+                        ? "top-2 text-xs"
+                        : "top-1/2 -translate-y-1/2 text-base text-gray-400"}
+          peer-focus:top-2 peer-focus:text-xs
+          ${isDark ? "peer-focus:text-amber-400" : "peer-focus:text-amber-500"}
+        `}
+            >
+                {placeholder}
+            </label>
+        </div>
+    );
+};
+
+export default Input;
+
+

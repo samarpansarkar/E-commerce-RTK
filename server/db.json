@@ -3,17 +3,9 @@
     {
       "id": "1",
       "title": "Wireless Bluetooth Headphones",
-      "price": 2499,
+      "price": "2599",
       "category": "Electronics",
       "description": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
-    },
-    {
-      "id": "2",
-      "title": "Smartwatch Pro X",
-      "price": 5999,
-      "category": "Electronics",
-      "description": "Feature-rich smartwatch with heart rate monitor, GPS, and AMOLED display.",
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {

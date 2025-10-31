@@ -29,6 +29,7 @@ const ViewProduct = () => {
         }
     }
 
+
     return (
         <div className={`py-8  transition-colors ${theme === " dark" ? "bg-slate-600 text - gray - 100" : "bg - white text - gray - 900"}`}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,8 +40,8 @@ const ViewProduct = () => {
                         </div>
                         <div className="flex flex-col md:flex-row items-center -mx-2  mb-4 gap-3">
                             <Button title="DELETE" onClick={deleteHandler} />
-                            <Button title="ADD TO CART" />
-                            <Button title="BUY" />
+                            <Button title="UPDATE" onClick={() => navigate(`/update/${id}`)} />
+                            <Button title="ADD CART" />
                         </div>
                     </div>
                     <div className="md:flex-1 px-4">

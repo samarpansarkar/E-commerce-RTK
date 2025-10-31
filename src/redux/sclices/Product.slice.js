@@ -4,6 +4,7 @@ import {
   productInfo,
   createProductAPI,
   deleteProductAPI,
+  updateProductAPI,
 } from "../reducers/Product.reducer";
 
 const ProductSlice = createSlice({
@@ -96,6 +97,27 @@ const ProductSlice = createSlice({
         // state.products = state.products.filter((p) => p.id !== deletedId);
       }),
       builder.addCase(deleteProductAPI.rejected, (state, action) => {
+        state.isError = true;
+        state.errorMsg = action.error.message;
+        state.isLoading = false;
+      });
+
+    builder.addCase(updateProductAPI.pending, (state) => {
+      state.isLoading = true;
+      state.isError = false;
+      state.errorMsg = "";
+    }),
+      builder.addCase(updateProductAPI.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.errorMsg = "";
+        state.product = action.payload;
+          // const updatedProduct = action.payload;
+          // state.products = state.products.map((p) =>
+          //   p.id === updatedProduct.id ? updatedProduct : p
+          // );
+      }),
+      builder.addCase(updateProductAPI.rejected, (state, action) => {
         state.isError = true;
         state.errorMsg = action.error.message;
         state.isLoading = false;

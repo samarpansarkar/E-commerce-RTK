@@ -5,7 +5,7 @@ export const getAllProducts = createAsyncThunk(
   "/products",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await ApiManager("/products");
+      const res = await ApiManager.get("/products");
       return res.data;
     } catch (error) {
       alert("Product Reducer:", error.message);
@@ -45,6 +45,19 @@ export const deleteProductAPI = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const res = await ApiManager.delete(`/products/${id}`);
+      return res.data;
+    } catch (error) {
+      alert("Product Reducer", error.message);
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const updateProductAPI = createAsyncThunk(
+  "/product/updateProduct",
+  async ({ id, formData }, { rejectWithValue }) => {
+    try {
+      const res = await ApiManager.put(`/products/${id}`, formData);
       return res.data;
     } catch (error) {
       alert("Product Reducer", error.message);

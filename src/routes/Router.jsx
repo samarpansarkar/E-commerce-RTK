@@ -5,6 +5,7 @@ import App from "../App";
 import CartPage from "../pages/CartPage";
 import ViewProduct from "../pages/ViewProduct";
 import AddProduct from "../pages/AddProduct";
+import UpdateProduct from "../pages/UpdateProduct";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add', element: <AddProduct />
+            },
+            {
+                path: '/update/:id', element: <UpdateProduct />
             },
 
 
