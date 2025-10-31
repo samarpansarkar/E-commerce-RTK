@@ -5,6 +5,7 @@ import Button from '../components/UI/Button'
 import { useDispatch } from 'react-redux'
 import { createProductLocal } from '../redux/sclices/Product.slice'
 import { createProductAPI } from '../redux/reducers/Product.reducer'
+import { toast } from 'react-toastify'
 
 const AddProduct = () => {
     const dispatch = useDispatch()
@@ -27,8 +28,14 @@ const AddProduct = () => {
         e.preventDefault()
         console.log(formData);
         dispatch(createProductLocal(formData))
-        dispatch(createProductAPI(formData)).unwrap().then(alert("Product Added")).catch(alert("Faceing problem in add product!!"))
-        navigate("/")
+        try {
+
+            dispatch(createProductAPI(formData))
+            toast.success("Product added!!!")
+            navigate("/")
+        } catch (error) {
+            toast.error("Something went wrong in adding product!!", error.message);
+        }
     }
     return (
         <div className={`py-2  transition-colors ${theme === " dark" ? "bg - gray - 800 text - gray - 100" : "bg - white text - gray - 900"}`}>
@@ -44,10 +51,7 @@ const AddProduct = () => {
                         <Input placeholder="Description" name="description" value={formData.description} onChange={inputHandler} />
                     </div>
                     <Input placeholder="ImageURL" name="image" value={formData.image} onChange={inputHandler} />
-                    <div className='md:flex justify-between gap-4'>
-                        <Button title="Buy" color="green" type="submit" />
-                        <Button title="Add" color="red" />
-                    </div>
+                    <Button title="Add Product" color="green" type="submit" />
                 </form>
             </div>
         </div>
