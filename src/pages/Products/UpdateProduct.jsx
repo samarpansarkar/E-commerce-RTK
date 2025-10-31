@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import Input from '../../components/UI/Input'
 import Button from '../../components/UI/Button'
 import Loader from '../../components/Loader'
-import Error from '../../components/Error'
+import Error from '../../components/ErrorPage'
 
 const UpdateProduct = () => {
     const { id } = useParams();

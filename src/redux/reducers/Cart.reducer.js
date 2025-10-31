@@ -11,3 +11,5 @@ export const getAllCart = createAsyncThunk("/cart", async (_, { errorObj }) => {
     return errorObj(error);
   }
 });
+
+

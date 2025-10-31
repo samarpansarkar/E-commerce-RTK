@@ -13,12 +13,11 @@ const Navbar = () => {
                 : "bg-gray-50 text-gray-900"
                 }`}
         >
-            {/* Navbar */}
             <section
                 className={`flex justify-between px-20 py-5 transition-colors duration-500 ${theme === "dark" ? "bg-gray-900" : "bg-gray-100"
                     }`}
             >
-                <Link to="/" className="text-xl font-bold">
+                <Link to="/" className="text-xl font-bold text-amber-400">
                     {TEXT.APP_HEADING}
                 </Link>
 
@@ -28,7 +27,7 @@ const Navbar = () => {
                         <Link
                             key={link.to}
                             to={link.to}
-                            className="hover:text-blue-500 transition-colors"
+                            className="hover:text-amber-400 transition-colors"
                         >
                             {link.text}
                         </Link>

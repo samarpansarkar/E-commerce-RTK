@@ -6,6 +6,7 @@ import Loader from "./components/Loader";
 import { useOutletContext } from "react-router-dom";
 import { toast } from "react-toastify";
 import Card from "./components/UI/Card";
+import Heading from "./components/UI/Heading";
 
 const App = () => {
   const { theme } = useOutletContext();
@@ -25,13 +26,12 @@ const App = () => {
   return (
     <section
       className={`
-        min-h-screen transition-colors duration-300
-        ${theme === "dark"
-          ? "bg-brand-bgDark text-brand-textDark"
-          : "bg-brand-bgLight text-brand-textLight"}
-      `}
+        min-h-screen transition-colors duration-300 mx-5 rounded-2xl
+        ${theme === "dark" ? "bg-gray-900" : "bg-slate-0"}`}
+
     >
-      <h1 className='text-center text-3xl font-bold underline'>{TEXT.APP_HEADING}</h1>
+      {/* <h1 className='text-center text-3xl font-bold underline'>{TEXT.APP_HEADING}</h1> */}
+      <Heading first_txt="Products" second_txt="List" description="Browse our collection of amazing products. " />
       {isLoading ? <Loader /> : <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 max-w-6xl mx-auto      
   "
