@@ -38,7 +38,7 @@ const AddProduct = () => {
         }
     }
     return (
-        <section className={`py-2  transition-colors ${theme === " dark" ? "bg - gray - 800 text - gray - 100" : "bg - white text - gray - 900"}`}>
+        <section className={`py-2  transition-colors ${theme === " dark" ? "bg-gray-800 text-gray-100" : "bg-white text-gray-900"}`}>
             <div className="max-w-6xl mx-auto px-4  flex flex-col justify-center items-center fle sm:px-6 lg:px-8">
                 <h1 className='text-center text-xl font-semibold mb-3'>List your product in my wesite!!</h1>
                 <form onSubmit={formHandler} className={`px-6 py-8 rounded shadow-2xl flex flex-col justify-between items-center md:w-xl gap-2`}>

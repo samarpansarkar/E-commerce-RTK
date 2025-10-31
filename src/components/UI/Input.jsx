@@ -15,9 +15,10 @@ const Input = ({ name, type = "text", value, placeholder, onChange, theme }) => 
                 placeholder=" "
                 className={`
           peer w-full rounded-lg border-2 bg-transparent px-4 pt-5 pb-2 text-sm font-medium outline-none transition-all duration-300
-          ${isDark
-                        ? "border-gray-700 text-gray-100 focus:border-amber-400 focus:shadow-[0_0_10px_rgba(251,191,36,0.4)]"
-                        : "border-gray-300 text-gray-900 focus:border-amber-500 focus:shadow-[0_0_10px_rgba(245,158,11,0.3)]"}
+          ${isDark === "dark"
+                        ? "border-gray-700 focus:border-amber-400 focus:shadow-[0_0_10px_rgba(251,191,36,0.4)]"
+                        : "border-gray-300 focus:border-amber-500 focus:shadow-[0_0_10px_rgba(245,158,11,0.3)]"
+                    }
           ${value ? "border-amber-500" : ""}
         `}
             />
@@ -40,5 +41,8 @@ const Input = ({ name, type = "text", value, placeholder, onChange, theme }) => 
 };
 
 export default Input;
+
+
+
 
 
