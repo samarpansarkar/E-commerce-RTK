@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllCart } from "../../redux/reducers/Cart.reducer";
+import { deleteCartItemAPI, getAllCart } from "../../redux/reducers/Cart.reducer";
 import Heading from "../../components/UI/Heading";
 import { useOutletContext } from "react-router-dom";
 import Button from "../../components/UI/Button";
 import { toast } from "react-toastify";
+import { decrementQuantity, deleteProductLocal, incrementQuantity } from "../../redux/sclices/Cart.slice";
 
 const CartPage = () => {
     const { theme } = useOutletContext();
@@ -20,6 +21,15 @@ const CartPage = () => {
             toast.error("Failed to fetch cart items:", error);
         });
     }, [dispatch]);
+
+    const deleteHandle = (id) => {
+        dispatch(deleteProductLocal(id));
+        dispatch(deleteCartItemAPI(id)).then(() => {
+            toast.success("Item removed from cart successfully!");
+        }).catch((error) => {
+            toast.error("Failed to remove item from cart:", error);
+        });
+    }
 
     return (
         <section className={`min-h-screen rounded-2xl ${theme === "dark" ? "bg-gray-900" : "bg-slate-0"} py-10 px-4 transition-colors duration-300`}>
@@ -60,17 +70,17 @@ const CartPage = () => {
                             {/* Actions */}
                             <div className="flex items-center gap-3 sm:flex-col sm:items-end sm:gap-2">
                                 <div className="flex items-center border rounded-lg overflow-hidden">
-                                    <button className="px-3 py-1 ">
+                                    <button onClick={() => dispatch(decrementQuantity(item.id))} className="px-3 py-1 ">
                                         −
                                     </button>
                                     <span className="px-4  ">
-                                        {item.quantity || 1}
+                                        {item.product.quantity || 1}
                                     </span>
-                                    <button className="px-3 py-1 ">
+                                    <button onClick={() => dispatch(incrementQuantity(item.id))} className="px-3 py-1 ">
                                         +
                                     </button>
                                 </div>
-                                <Button title="Remove" />
+                                <Button title="Remove" onClick={() => deleteHandle(item.id)} />
                             </div>
                         </div>
                     ))}

@@ -5,7 +5,8 @@ import { deleteProductAPI, productInfo } from "../../redux/reducers/Product.redu
 import Button from "../../components/UI/Button";
 import { deleteProductLocal } from "../../redux/sclices/Product.slice";
 import { toast } from "react-toastify";
-import { addToCart } from "../../redux/reducers/Cart.reducer";
+import { addToCartAPI } from "../../redux/reducers/Cart.reducer";
+import { addToCartLocal } from "../../redux/sclices/Cart.slice";
 
 const ViewProduct = () => {
     const { theme } = useOutletContext();
@@ -36,7 +37,8 @@ const ViewProduct = () => {
             product: product,
             quantity: 1
         }
-        dispatch(addToCart(cartData)).then(() => {
+        dispatch(addToCartLocal(cartData));
+        dispatch(addToCartAPI(cartData)).then(() => {
             toast.success("Product added to cart successfully!!!")
         }).catch((error) => {
             toast.error("Something went wrong in adding to cart!!", error.message);

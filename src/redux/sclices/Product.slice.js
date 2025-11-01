@@ -93,7 +93,7 @@ const ProductSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.errorMsg = "";
-        // const deletedId = action.payload.id;  //! I dont use this filter method here because I crate a local delete product reducer and it handle the ui part. This comment is not form chatGPT or any other AI.
+        // const deletedId = action.payload.id;  //! I dont use this filter method here because I crate a local delete product reducer and it handle the ui part. This comment is not from chatGPT or any other AI.
         // state.products = state.products.filter((p) => p.id !== deletedId);
       }),
       builder.addCase(deleteProductAPI.rejected, (state, action) => {

@@ -1,5 +1,9 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { getAllCart, addToCart } from "../reducers/Cart.reducer";
+import {
+  getAllCart,
+  deleteCartItemAPI,
+  addToCartAPI,
+} from "../reducers/Cart.reducer";
 
 const CartSlice = createSlice({
   name: "cart",
@@ -10,14 +14,36 @@ const CartSlice = createSlice({
     errorMsg: "",
   },
   reducers: {
-    createCart: (state, action) => {
-      const cart = { id: nanoid(), ...action.payload };
-      state.cart.push(cart);
+    addToCartLocal: (state, action) => {
+      const existing = state.cart.find((item) => item.id === action.payload.id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        state.cart.push({ id: nanoid(), quantity: 1, ...action.payload });
+      }
+    },
+    deleteProductLocal: (state, action) => {
+      const cartId = action.payload;
+      state.cart = state.cart.filter((p) => p.id !== cartId);
+    },
+    incrementQuantity: (state, action) => {
+      const item = state.cart.find((i) => i.id === action.payload);
+      if (item) {
+        item.quantity += 1;
+      }
+    },
+
+    decrementQuantity: (state, action) => {
+      const item = state.cart.find((i) => i.id === action.payload);
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+      } else if (item && item.quantity === 1) {
+        state.cart = state.cart.filter((i) => i.id !== action.payload);
+      }
     },
   },
   extraReducers: (builder) => {
     builder.addCase(getAllCart.pending, (state) => {
-      state.cart = [];
       state.isLoading = true;
       state.isError = false;
       state.errorMsg = "";
@@ -34,24 +60,50 @@ const CartSlice = createSlice({
       state.errorMsg = action.error.message;
     });
 
-    builder.addCase(addToCart.pending, (state) => {
+    builder.addCase(addToCartAPI.pending, (state) => {
       state.isLoading = true;
       state.isError = false;
       state.errorMsg = "";
     });
-    builder.addCase(addToCart.fulfilled, (state, action) => {
+    builder.addCase(addToCartAPI.fulfilled, (state, action) => {
       state.isLoading = false;
       state.isError = false;
       state.errorMsg = "";
-      state.cart.push(action.payload);
+      const existing = state.cart.find((i) => i.id === action.payload.id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        state.cart.push({ ...action.payload, quantity: 1 });
+      }
     });
-    builder.addCase(addToCart.rejected, (state, action) => {
+    builder.addCase(addToCartAPI.rejected, (state, action) => {
       state.isLoading = false;
       state.isError = true;
       state.errorMsg = action.error.message;
     });
+
+    builder.addCase(deleteCartItemAPI.pending, (state) => {
+      state.isLoading = true;
+      state.isError = false;
+      state.errorMsg = "";
+    }),
+      builder.addCase(deleteCartItemAPI.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.errorMsg = "";
+      }),
+      builder.addCase(deleteCartItemAPI.rejected, (state, action) => {
+        state.isError = true;
+        state.errorMsg = action.error.message;
+        state.isLoading = false;
+      });
   },
 });
 
-export const { createCart } = CartSlice.actions;
+export const {
+  addToCartLocal,
+  incrementQuantity,
+  decrementQuantity,
+  deleteProductLocal,
+} = CartSlice.actions;
 export default CartSlice.reducer;
