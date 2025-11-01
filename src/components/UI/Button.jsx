@@ -8,7 +8,7 @@ const Button = ({ title, onClick, type = "button", className = "", children }) =
             type={type}
             onClick={onClick}
             className={`
-        w-full rounded-xl px-4 py-2 font-semibold transition-all duration-300 
+        w-full rounded-xl px-4 py-2 font-semibold transition-all duration-300 cursor-pointer  hover:scale-105
         shadow-md active:scale-95
         ${theme === "light"
                     ? "bg-blue-500 text-white hover:bg-blue-400 active:bg-blue-600"

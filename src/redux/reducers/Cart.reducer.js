@@ -42,3 +42,19 @@ export const deleteCartItemAPI = createAsyncThunk(
     }
   }
 );
+
+export const updateCartQuantityAPI = createAsyncThunk(
+  "cart/updateCartQuantity",
+  async ({ cartId, quantity }, { rejectWithValue }) => {
+    console.log(cartId,quantity);
+    try {
+      const response = await ApiManager.patch(`/cart/${cartId}`, {
+        quantity,
+      });
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || error.message);
+    }
+  }
+);
+

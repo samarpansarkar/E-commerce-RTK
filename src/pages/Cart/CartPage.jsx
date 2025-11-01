@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteCartItemAPI, getAllCart } from "../../redux/reducers/Cart.reducer";
+import { deleteCartItemAPI, getAllCart, updateCartQuantityAPI } from "../../redux/reducers/Cart.reducer";
 import Heading from "../../components/UI/Heading";
 import { useOutletContext } from "react-router-dom";
 import Button from "../../components/UI/Button";
 import { toast } from "react-toastify";
-import { decrementQuantity, deleteProductLocal, incrementQuantity } from "../../redux/sclices/Cart.slice";
+import { decrementQuantity, deleteProductLocal, incrementQuantity, } from "../../redux/sclices/Cart.slice";
 
 const CartPage = () => {
     const { theme } = useOutletContext();
@@ -13,11 +13,9 @@ const CartPage = () => {
     const { cart = [] } = useSelector((state) => state.carts);
 
     useEffect(() => {
-        dispatch(getAllCart()).then(
-            () => {
-                toast.success("Cart items fetched successfully!");
-            }
-        ).catch((error) => {
+        dispatch(getAllCart()).then(() => {
+            toast.success("Cart items fetched successfully!");
+        }).catch((error) => {
             toast.error("Failed to fetch cart items:", error);
         });
     }, [dispatch]);
@@ -49,34 +47,48 @@ const CartPage = () => {
                         >
                             {/* Image */}
                             <img
-                                src={item.product.image}
-                                alt={item.product.title}
+                                src={item?.product?.image}
+                                alt={item?.product?.title}
                                 className="w-28 h-28 object-contain rounded-lg  dark:bg-gray-700"
                             />
 
                             {/* Product Details */}
                             <div className="flex-1 text-center sm:text-left">
                                 <h2 className="text-lg font-medium">
-                                    {item.product.title}
+                                    {item?.product?.title}
                                 </h2>
                                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">
-                                    {item.product.description}
+                                    {item?.product?.description}
                                 </p>
                                 <span className="block mt-2 text-xl font-semibold ">
-                                    ₹{item.product.price}
+                                    ₹{item?.product?.price}
                                 </span>
                             </div>
 
                             {/* Actions */}
                             <div className="flex items-center gap-3 sm:flex-col sm:items-end sm:gap-2">
                                 <div className="flex items-center border rounded-lg overflow-hidden">
-                                    <button onClick={() => dispatch(decrementQuantity(item.id))} className="px-3 py-1 ">
+                                    <button onClick={() => {
+                                        dispatch(
+                                            updateCartQuantityAPI({
+                                                cartId: item.id,
+                                                quantity: item.quantity - 1,
+                                            })
+                                        ), dispatch(decrementQuantity(item?.product?.id))
+                                    }} className="px-3 py-1 cursor-pointer">
                                         −
                                     </button>
                                     <span className="px-4  ">
-                                        {item.product.quantity || 1}
+                                        {item?.quantity || 1}
                                     </span>
-                                    <button onClick={() => dispatch(incrementQuantity(item.id))} className="px-3 py-1 ">
+                                    <button onClick={() => {
+                                        dispatch(incrementQuantity(item?.product?.id)), dispatch(
+                                            updateCartQuantityAPI({
+                                                cartId: item.id,
+                                                quantity: item.quantity + 1,
+                                            })
+                                        )
+                                    }} className="px-3 py-1 cursor-pointer">
                                         +
                                     </button>
                                 </div>
