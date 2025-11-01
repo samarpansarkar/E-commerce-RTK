@@ -2,6 +2,8 @@ import { Link, Outlet } from 'react-router-dom'
 import { NAV_LINK, TEXT } from '../constants/Constants'
 import ToggleButton from './ToggleButton'
 import { useState } from 'react';
+import Button from './UI/Button';
+import { ShoppingCart } from 'lucide-react';
 
 const Navbar = () => {
     const [theme, setTheme] = useState("light");
@@ -17,7 +19,7 @@ const Navbar = () => {
                 className={`flex justify-between px-20 py-5 transition-colors duration-500 ${theme === "dark" ? "bg-gray-900" : "bg-gray-100"
                     }`}
             >
-                <Link to="/" className="text-xl font-bold text-amber-400">
+                <Link to="/" className="text-xl font-bold text-amber-600">
                     {TEXT.APP_HEADING}
                 </Link>
 
@@ -33,6 +35,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                 </nav>
+                <Link to="/cart" className='bg-amber-600 flex justify-center items-center py-2 px-4 rounded-md hover:bg-amber-500 hover:scale-105 duration-300 cursor-pointer '><ShoppingCart /></Link>
             </section>
             <div className="px-20 py-10">
                 <Outlet context={{ theme }} />

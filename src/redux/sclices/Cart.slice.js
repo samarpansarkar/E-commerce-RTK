@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { getAllCart } from "../reducers/Cart.reducer";
+import { getAllCart, addToCart } from "../reducers/Cart.reducer";
 
 const CartSlice = createSlice({
   name: "cart",
@@ -17,21 +17,38 @@ const CartSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getAllCart.pending, (state) => {
-      (state.cart = []),
-        (state.isLoading = true),
-        (state.isError = false),
-        (state.errorMsg = "");
+      state.cart = [];
+      state.isLoading = true;
+      state.isError = false;
+      state.errorMsg = "";
     });
     builder.addCase(getAllCart.fulfilled, (state, action) => {
-      (state.isLoading = false),
-        (state.isError = false),
-        (state.errorMsg = ""),
-        (state.cart = action.payload);
+      state.isLoading = false;
+      state.isError = false;
+      state.errorMsg = "";
+      state.cart = action.payload;
     });
     builder.addCase(getAllCart.rejected, (state, action) => {
-      (state.isLoading = false),
-        (state.isError = true),
-        (state.errorMsg = action.error.message);
+      state.isLoading = false;
+      state.isError = true;
+      state.errorMsg = action.error.message;
+    });
+
+    builder.addCase(addToCart.pending, (state) => {
+      state.isLoading = true;
+      state.isError = false;
+      state.errorMsg = "";
+    });
+    builder.addCase(addToCart.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.isError = false;
+      state.errorMsg = "";
+      state.cart.push(action.payload);
+    });
+    builder.addCase(addToCart.rejected, (state, action) => {
+      state.isLoading = false;
+      state.isError = true;
+      state.errorMsg = action.error.message;
     });
   },
 });

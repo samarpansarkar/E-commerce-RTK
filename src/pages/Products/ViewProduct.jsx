@@ -5,6 +5,7 @@ import { deleteProductAPI, productInfo } from "../../redux/reducers/Product.redu
 import Button from "../../components/UI/Button";
 import { deleteProductLocal } from "../../redux/sclices/Product.slice";
 import { toast } from "react-toastify";
+import { addToCart } from "../../redux/reducers/Cart.reducer";
 
 const ViewProduct = () => {
     const { theme } = useOutletContext();
@@ -29,6 +30,19 @@ const ViewProduct = () => {
         }
     }
 
+    const addToCartHandler = () => {
+        const cartData = {
+            productId: product.id,
+            product: product,
+            quantity: 1
+        }
+        dispatch(addToCart(cartData)).then(() => {
+            toast.success("Product added to cart successfully!!!")
+        }).catch((error) => {
+            toast.error("Something went wrong in adding to cart!!", error.message);
+        });
+    }
+
 
     return (
         <div className={`py-8  transition-colors ${theme === " dark" ? "bg-slate-600 text - gray - 100" : "bg - white text - gray - 900"}`}>
@@ -41,7 +55,7 @@ const ViewProduct = () => {
                         <div className="flex flex-col md:flex-row items-center -mx-2  mb-4 gap-3">
                             <Button title="DELETE" onClick={deleteHandler} />
                             <Button title="UPDATE" onClick={() => navigate(`/update/${id}`)} />
-                            <Button title="ADD CART" />
+                            <Button title="ADD CART" onClick={addToCartHandler} />
                         </div>
                     </div>
                     <div className="md:flex-1 px-4">
