@@ -9,140 +9,189 @@
       "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
     },
     {
+      "id": "2",
+      "title": "Smart Fitness Band 5",
+      "price": "1999",
+      "category": "Wearables",
+      "description": "Fitness tracker with heart rate, SpO₂, sleep tracking, and 14-day battery life.",
+      "image": "https://m.media-amazon.com/images/I/61u1VALn6JL._SL1500_.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Wireless Mouse M510",
+      "price": "899",
+      "category": "Computer Accessories",
+      "description": "Ergonomic wireless mouse with smooth scrolling and precision tracking.",
+      "image": "https://m.media-amazon.com/images/I/61LtuGzXeaL._SL1500_.jpg"
+    },
+    {
       "id": "4",
-      "title": "Women’s Leather Handbag",
-      "price": 2999,
-      "category": "Fashion",
-      "description": "Elegant and spacious handbag made from genuine leather.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "4K Ultra HD Smart LED TV",
+      "price": "34999",
+      "category": "Home Entertainment",
+      "description": "50-inch smart 4K TV with Dolby Audio and built-in streaming apps.",
+      "image": "https://m.media-amazon.com/images/I/71S8U9VzLTL._SL1500_.jpg"
     },
     {
       "id": "5",
-      "title": "Gaming Mouse RGB",
-      "price": 1299,
-      "category": "Electronics",
-      "description": "Ergonomic gaming mouse with RGB lighting and programmable buttons.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Smartwatch Series 7",
+      "price": "3299",
+      "category": "Wearables",
+      "description": "AMOLED screen, heart rate, SpO₂, notifications, activity tracking, and 7-day battery.",
+      "image": "https://m.media-amazon.com/images/I/61u2u8HxcvL._SL1500_.jpg"
     },
     {
       "id": "6",
-      "title": "Stainless Steel Water Bottle",
-      "price": 699,
-      "category": "Home & Kitchen",
-      "description": "Durable insulated bottle that keeps your drinks hot or cold for hours.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Portable Power Bank 20000mAh",
+      "price": "1799",
+      "category": "Electronics",
+      "description": "Slim and lightweight, dual USB output, fast charging, compatible with all smartphones.",
+      "image": "https://m.media-amazon.com/images/I/61l9ppT-5PL._SL1500_.jpg"
     },
     {
       "id": "7",
-      "title": "Running Shoes",
-      "price": 2499,
-      "category": "Sportswear",
-      "description": "Lightweight running shoes with cushioned soles for maximum comfort.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Bluetooth Earbuds Neo",
+      "price": "1499",
+      "category": "Audio",
+      "description": "True wireless earbuds, compact charging case, clear sound, 20-hour battery life.",
+      "image": "https://m.media-amazon.com/images/I/51tV+XDptdL._SL1500_.jpg"
     },
     {
       "id": "8",
-      "title": "Yoga Mat",
-      "price": 999,
-      "category": "Sportswear",
-      "description": "Eco-friendly yoga mat with non-slip surface and excellent grip.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Ergonomic Laptop Stand",
+      "price": "899",
+      "category": "Computer Accessories",
+      "description": "Aluminum adjustable stand, anti-slip, portable, improves posture for long use.",
+      "image": "https://m.media-amazon.com/images/I/51Wks15onSL._SL1500_.jpg"
     },
     {
       "id": "9",
-      "title": "Ceramic Coffee Mug Set",
-      "price": 799,
-      "category": "Home & Kitchen",
-      "description": "Set of 4 stylish ceramic coffee mugs perfect for everyday use.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Fitness Yoga Mat",
+      "price": "749",
+      "category": "Sports",
+      "description": "Non-slip, lightweight, sweat-resistant mat for workouts and yoga sessions.",
+      "image": "https://m.media-amazon.com/images/I/81o1yCjzn6L._SL1500_.jpg"
     },
     {
       "id": "10",
-      "title": "Wooden Study Table",
-      "price": 5499,
-      "category": "Furniture",
-      "description": "Compact wooden study table with modern design and durable finish.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Surge Protector Power Strip",
+      "price": "1299",
+      "category": "Electronics",
+      "description": "Multi-outlet surge protector with USB ports, compact and travel-friendly design.",
+      "image": "https://m.media-amazon.com/images/I/61N4yktG7TL._SL1500_.jpg"
     },
     {
       "id": "11",
-      "title": "LED Desk Lamp",
-      "price": 1299,
-      "category": "Home & Lighting",
-      "description": "Adjustable LED desk lamp with 3 brightness levels and touch control.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Fitness Smartwatch Pro",
+      "price": "3899",
+      "category": "Wearables",
+      "description": "Comprehensive health tracking with SpO₂, heart rate, sleep monitor, and customizable watch faces.",
+      "image": "https://m.media-amazon.com/images/I/71vcRJ6wmWL._SL1500_.jpg"
     },
     {
       "id": "12",
-      "title": "Wireless Keyboard and Mouse Combo",
-      "price": 1999,
-      "category": "Electronics",
-      "description": "Compact wireless keyboard and mouse combo for smooth productivity.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Wireless Gaming Headset",
+      "price": "3999",
+      "category": "Gaming Accessories",
+      "description": "Surround sound wireless headset with noise cancellation mic and RGB lighting.",
+      "image": "https://m.media-amazon.com/images/I/61JXw-VoILY._SL1500_.jpg"
     },
     {
       "id": "13",
-      "title": "Noise Cancelling Earbuds",
-      "price": 3499,
-      "category": "Electronics",
-      "description": "True wireless earbuds with deep bass and active noise cancellation.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Desk Organizer with Drawers",
+      "price": "749",
+      "category": "Office Supplies",
+      "description": "Multi-tier desk organizer for files, stationery, and gadgets, neat and compact.",
+      "image": "https://m.media-amazon.com/images/I/71yPRTsNkkL._SL1500_.jpg"
     },
     {
       "id": "14",
-      "title": "Stainless Steel Cookware Set",
-      "price": 4599,
-      "category": "Home & Kitchen",
-      "description": "5-piece stainless steel cookware set suitable for induction and gas stoves.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Portable Bluetooth Speaker Max",
+      "price": "2499",
+      "category": "Audio",
+      "description": "Powerful bass, waterproof, 15 hours playtime, hands-free calling support.",
+      "image": "https://m.media-amazon.com/images/I/71X9HDi-+VL._SL1500_.jpg"
     },
+
     {
       "id": "15",
-      "title": "Women’s Sports T-Shirt",
-      "price": 899,
-      "category": "Fashion",
-      "description": "Breathable sports t-shirt designed for gym and outdoor workouts.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Multi-Plug Power Adapter",
+      "price": "599",
+      "category": "Electronics",
+      "description": "Compact 3-socket power adapter with surge protection and USB charging ports.",
+      "image": "https://m.media-amazon.com/images/I/61ZpC1T6zML._SL1500_.jpg"
     },
     {
       "id": "16",
-      "title": "Laptop Backpack",
-      "price": 1799,
-      "category": "Accessories",
-      "description": "Water-resistant backpack with padded laptop compartment and USB charging port.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Ergonomic Office Chair",
+      "price": "7999",
+      "category": "Furniture",
+      "description": "Adjustable lumbar support and breathable mesh back for comfort during long working hours.",
+      "image": "https://m.media-amazon.com/images/I/71GZ8T9A4wL._SL1500_.jpg"
     },
     {
       "id": "17",
-      "title": "Tabletop Plant Decor",
-      "price": 499,
-      "category": "Home Decor",
-      "description": "Beautiful artificial plant with ceramic pot to enhance your workspace.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Wireless Earbuds with Charging Case",
+      "price": "2799",
+      "category": "Audio",
+      "description": "True wireless earbuds with touch control, noise isolation, and 24-hour battery life including case.",
+      "image": "https://m.media-amazon.com/images/I/61x5RhIgTWL._SL1500_.jpg"
     },
     {
       "id": "18",
-      "title": "Men’s Leather Wallet",
-      "price": 1199,
-      "category": "Accessories",
-      "description": "Premium leather wallet with multiple card slots and coin pocket.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Yoga Mat with Carry Strap",
+      "price": "1299",
+      "category": "Sports & Outdoors",
+      "description": "Non-slip, eco-friendly yoga mat with cushioning and convenient carry strap for portability.",
+      "image": "https://m.media-amazon.com/images/I/81pLxbEmuRL._SL1500_.jpg"
     },
     {
       "id": "19",
-      "title": "Bluetooth Portable Speaker",
-      "price": 2399,
-      "category": "Electronics",
-      "description": "Compact Bluetooth speaker with deep bass and long-lasting battery.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "Stainless Steel Water Bottle 750ml",
+      "price": "799",
+      "category": "Home & Kitchen",
+      "description": "Double-wall insulated bottle keeps drinks hot or cold for 12 hours, leak-proof lid included.",
+      "image": "https://m.media-amazon.com/images/I/61BBd79ZTxL._SL1500_.jpg"
     },
     {
       "id": "20",
-      "title": "Office Chair Ergonomic",
-      "price": 7999,
-      "category": "Furniture",
-      "description": "Ergonomic office chair with lumbar support and adjustable height.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
+      "title": "4K Ultra HD Smart Projector",
+      "price": "41999",
+      "category": "Home Entertainment",
+      "description": "Portable 4K projector with HDR support, built-in speakers, and wireless connectivity.",
+      "image": "https://m.media-amazon.com/images/I/71Wt5Lq8O0L._SL1500_.jpg"
+    },
+    {
+      "id": "21",
+      "title": "Noise Cancelling Over-Ear Headphones",
+      "price": "6499",
+      "category": "Audio",
+      "description": "Active noise cancellation, deep bass, up to 30 hours playback time, with foldable design.",
+      "image": "https://m.media-amazon.com/images/I/61PbnaVvcGL._SL1500_.jpg"
+    },
+    {
+      "id": "22",
+      "title": "Fast Charging USB Type-C Hub",
+      "price": "2999",
+      "category": "Computer Accessories",
+      "description": "Multi-port hub with USB-C power delivery, HDMI output, SD card reader, and Ethernet port.",
+      "image": "https://m.media-amazon.com/images/I/61pAEcxzJrL._SL1500_.jpg"
+    },
+    {
+      "id": "23",
+      "title": "Adjustable Dumbbell Set",
+      "price": "10999",
+      "category": "Fitness",
+      "description": "Space-saving adjustable dumbbells from 5-25 kg, durable grip, ideal for home workouts.",
+      "image": "https://m.media-amazon.com/images/I/61nkEpM6kaL._SL1500_.jpg"
+    },
+    {
+      "id": "24",
+      "title": "Smart LED Desk Lamp",
+      "price": "1699",
+      "category": "Home Office",
+      "description": "Touch control, adjustable brightness and color temperature, USB charging port included.",
+      "image": "https://m.media-amazon.com/images/I/61n2BhR2bjL._SL1500_.jpg"
     }
   ],
   "cart": [

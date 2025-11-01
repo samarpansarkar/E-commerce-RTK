@@ -34,7 +34,7 @@ const Card = ({ product, theme }) => {
                 <img
                     src={product.image ? product.image : ProductDefImg}
                     alt={product.title}
-                    className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-56 md:h-64 lg:h-72"
+                    className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-40 md:h-52 lg:h-64"
                 />
 
                 {/* Quick Action Buttons on Hover */}
