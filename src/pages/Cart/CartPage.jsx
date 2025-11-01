@@ -27,7 +27,7 @@ const CartPage = () => {
         }).catch((error) => {
             toast.error("Failed to remove item from cart:", error);
         });
-    }
+    };
 
     return (
         <section className={`min-h-screen rounded-2xl ${theme === "dark" ? "bg-gray-900" : "bg-slate-0"} py-10 px-4 transition-colors duration-300`}>

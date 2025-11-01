@@ -26,8 +26,8 @@ const Card = ({ product, theme }) => {
     }
     return (
         <section
-            className={`group relative flex flex-col overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl
-        ${theme === "dark" ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"}`}
+            className={`group relative flex flex-col overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl border-2
+        ${theme === "dark" ? "bg-gray-900 border-gray-300 text-gray-100" : "bg-white border-gray-500 text-gray-900"}`}
         >
             {/* Image Section */}
             <div className="relative overflow-hidden">
@@ -38,7 +38,7 @@ const Card = ({ product, theme }) => {
                 />
 
                 {/* Quick Action Buttons on Hover */}
-                <div className="absolute inset-0 flex items-center justify-center gap-3 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center gap-3 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 px-1">
 
                     <Button title="View" onClick={() => navigate(`/product/${product.id}`)} />
                     <Button title="Add Cart" onClick={addProductHandler} />
