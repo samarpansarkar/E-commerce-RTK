@@ -7,6 +7,7 @@ import Loader from "./components/Loader";
 import Card from "./components/UI/Card";
 import Heading from "./components/UI/Heading";
 import useDebounce from "./utils/useDebouncer";
+import Button from "./components/UI/Button";
 
 const App = () => {
   const { theme } = useOutletContext();
@@ -56,16 +57,42 @@ const App = () => {
         description="Browse our collection of amazing products."
       />
 
-      <input
-        type="text"
-        placeholder="Search products..."
-        onChange={(e) => setSearch(e.target.value)}
-        className={`w-full max-w-md mx-auto block mb-6 px-4 py-2 rounded-xl border focus:outline-none transition-all duration-300
+      <div>
+        <div className="flex flex-col md:flex-row justify-center items-center md:gap-4 px-4">
+          <select
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className={`ml-4 px-4 py-2 rounded-xl border focus:outline-none transition-all duration-300
         ${theme === "dark"
-            ? "bg-gray-800 border-gray-600 text-white placeholder-amber-400 focus:border-amber-600"
-            : "bg-white border-gray-300 text-gray-800 placeholder-amber-500 focus:border-blue-500"
-          }`}
-      />
+                ? "bg-gray-800 border-gray-600 text-white placeholder-amber-400 focus:border-amber-600"
+                : "bg-white border-gray-300 text-gray-800 placeholder-amber-500 focus:border-blue-500"
+              }`}
+          >
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+          </select>
+          {/* todo implement price range filter */}
+
+        </div>
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className={`w-full max-w-md mx-auto block mb-6 px-4 py-2 rounded-xl border focus:outline-none transition-all duration-300
+        ${theme === "dark"
+              ? "bg-gray-800 border-gray-600 text-white placeholder-amber-400 focus:border-amber-600"
+              : "bg-white border-gray-300 text-gray-800 placeholder-amber-500 focus:border-blue-500"
+            }`}
+        />
+        <div className="flex justify-center items-center">
+          <Button onClick={() => setSearch("")}>Clear</Button>
+
+        </div>
+      </div>
+
 
       {isLoading ? (
         <Loader />
