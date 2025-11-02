@@ -1,7 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 
 export const TEXT = {
-  APP_HEADING: "SpanWare",
+  APP_HEADING: "SpanWeaR",
 };
 
 export const NAV_LINK = [
