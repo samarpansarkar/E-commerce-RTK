@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { deleteProductAPI, productInfo } from "../../redux/reducers/Product.reducer";
@@ -7,6 +7,7 @@ import { deleteProductLocal } from "../../redux/sclices/Product.slice";
 import { toast } from "react-toastify";
 import { addToCartAPI } from "../../redux/reducers/Cart.reducer";
 import { addToCartLocal } from "../../redux/sclices/Cart.slice";
+import DeleteModal from "../../components/UI/DeleteModal";
 
 const ViewProduct = () => {
     const { theme } = useOutletContext();
@@ -14,22 +15,36 @@ const ViewProduct = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { product = {}, isLoading, isError, errorMsg } = useSelector(state => state.products);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     console.log({ product, isLoading, isError, errorMsg });
     useEffect(() => {
         dispatch(productInfo(id))
     }, [id, dispatch])
 
-    const deleteHandler = () => {
+    // const deleteHandler = () => {
+    //     dispatch(deleteProductLocal(id));
+    //     try {
+    //         dispatch(deleteProductAPI(id));
+    //         toast.success("Product deleted successfully!!!")
+    //         navigate("/")
+    //     } catch (error) {
+    //         toast.error("Something went wrong in deleting product!!", error.message);
+    //     }
+    // }
+
+    const confirmDelete = () => {
         dispatch(deleteProductLocal(id));
         try {
             dispatch(deleteProductAPI(id));
-            toast.success("Product deleted successfully!!!")
-            navigate("/")
+            toast.success("Product deleted successfully!");
+            navigate("/");
         } catch (error) {
-            toast.error("Something went wrong in deleting product!!", error.message);
+            toast.error("Something went wrong while deleting!", error.message);
+        } finally {
+            setIsModalOpen(false);
         }
-    }
+    };
 
     const addToCartHandler = () => {
         const cartData = {
@@ -55,7 +70,7 @@ const ViewProduct = () => {
                             <img className="w-full h-full object-cover" src={product.image} alt="Product Image" />
                         </div>
                         <div className="flex flex-col md:flex-row items-center -mx-2  mb-4 gap-3">
-                            <Button title="DELETE" onClick={deleteHandler} />
+                            <Button title="DELETE" onClick={() => setIsModalOpen(true)} />
                             <Button title="UPDATE" onClick={() => navigate(`/update/${id}`)} />
                             <Button title="ADD CART" onClick={addToCartHandler} />
                         </div>
@@ -103,6 +118,16 @@ const ViewProduct = () => {
                     </div>
                 </div>
             </div>
+            <DeleteModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                onConfirm={confirmDelete}
+                title="Confirm Deletion"
+                message={`Are you sure you want to delete "${product.title}"? This action cannot be undone.`}
+                confirmText="Yes, Delete"
+                cancelText="Cancel"
+                theme={theme}
+            />
         </div>
 
     );
