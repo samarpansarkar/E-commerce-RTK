@@ -112,10 +112,6 @@ const ProductSlice = createSlice({
         state.isError = false;
         state.errorMsg = "";
         state.product = action.payload;
-          // const updatedProduct = action.payload;
-          // state.products = state.products.map((p) =>
-          //   p.id === updatedProduct.id ? updatedProduct : p
-          // );
       }),
       builder.addCase(updateProductAPI.rejected, (state, action) => {
         state.isError = true;

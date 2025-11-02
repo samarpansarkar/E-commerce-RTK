@@ -21,7 +21,7 @@ const ContactPage = () => {
 
     return (
         <section
-            className={` flex flex-col items-center justify-center px-6 py-3 transition-colors duration-300 rounded-2xl ${isDark ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+            className={` flex flex-col items-center justify-center px-6 py-3 transition-colors duration-300 rounded-2xl ${isDark ? "bg-gray-900 text-gray-100 shadow-xl shadow-amber-500" : "bg-gray-50 text-gray-900"
                 }`}
         >
             <Heading first_txt="Contact" second_txt="Us" description="We'd love to hear from you! Reach out anytime." />
@@ -30,7 +30,6 @@ const ContactPage = () => {
                 className={`w-full max-w-3xl rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 mb-2 ${isDark ? "bg-gray-800 border border-gray-700" : "bg-white border border-gray-200"
                     }`}
             >
-                {/* Contact Info */}
                 <div className="flex-1 space-y-4 text-center items-center justify-center">
                     <div className="flex items-center gap-3">
                         <Mail className={isDark ? "text-amber-400" : "text-amber-600"} />
@@ -46,7 +45,6 @@ const ContactPage = () => {
                     </div>
                 </div>
 
-                {/* Form */}
                 <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-4">
                     <input
                         type="text"

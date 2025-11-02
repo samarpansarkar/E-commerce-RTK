@@ -7,6 +7,7 @@ import Input from '../../components/UI/Input'
 import Button from '../../components/UI/Button'
 import Loader from '../../components/Loader'
 import Error from '../../components/ErrorPage'
+import SelectOption from '../../components/UI/SelectOption'
 
 const UpdateProduct = () => {
     const { id } = useParams();
@@ -67,7 +68,7 @@ const UpdateProduct = () => {
                         <Input placeholder="Price" name="price" value={formData.price} onChange={inputHandler} />
                     </div>
                     <div className='md:flex gap-2'>
-                        <Input placeholder="Category" name="category" value={formData.category} onChange={inputHandler} />
+                        <SelectOption state={formData.category} setState={(value) => setFormData({ ...formData, category: value })} />
                         <Input placeholder="Description" name="description" value={formData.description} onChange={inputHandler} />
                     </div>
                     <Input placeholder="ImageURL" name="image" value={formData.image} onChange={inputHandler} />

@@ -38,7 +38,7 @@
       "price": "3299",
       "category": "Wearables",
       "description": "AMOLED screen, heart rate, SpO₂, notifications, activity tracking, and 7-day battery.",
-      "image": "https://m.media-amazon.com/images/I/61u2u8HxcvL._SL1500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81NibNTGT1L._AC_UY327_FMwebp_QL65_.jpg"
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "price": "1799",
       "category": "Electronics",
       "description": "Slim and lightweight, dual USB output, fast charging, compatible with all smartphones.",
-      "image": "https://m.media-amazon.com/images/I/61l9ppT-5PL._SL1500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/41vBAaU8clL._AC_UY327_FMwebp_QL65_.jpg"
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "price": "1499",
       "category": "Audio",
       "description": "True wireless earbuds, compact charging case, clear sound, 20-hour battery life.",
-      "image": "https://m.media-amazon.com/images/I/51tV+XDptdL._SL1500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71rbNPgK-RL._AC_UY327_FMwebp_QL65_.jpg"
     },
     {
       "id": "8",
@@ -62,7 +62,7 @@
       "price": "899",
       "category": "Computer Accessories",
       "description": "Aluminum adjustable stand, anti-slip, portable, improves posture for long use.",
-      "image": "https://m.media-amazon.com/images/I/51Wks15onSL._SL1500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/61AS07l2cBL._AC_UY327_FMwebp_QL65_.jpg"
     },
     {
       "id": "9",
@@ -112,7 +112,6 @@
       "description": "Powerful bass, waterproof, 15 hours playtime, hands-free calling support.",
       "image": "https://m.media-amazon.com/images/I/71X9HDi-+VL._SL1500_.jpg"
     },
-
     {
       "id": "15",
       "title": "Multi-Plug Power Adapter",
@@ -175,7 +174,7 @@
       "price": "2999",
       "category": "Computer Accessories",
       "description": "Multi-port hub with USB-C power delivery, HDMI output, SD card reader, and Ethernet port.",
-      "image": "https://m.media-amazon.com/images/I/61pAEcxzJrL._SL1500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/61Es4AZohLL._AC_UY327_FMwebp_QL65_.jpg"
     },
     {
       "id": "23",
@@ -192,6 +191,14 @@
       "category": "Home Office",
       "description": "Touch control, adjustable brightness and color temperature, USB charging port included.",
       "image": "https://m.media-amazon.com/images/I/61n2BhR2bjL._SL1500_.jpg"
+    },
+    {
+      "id": "2da2",
+      "title": "Redragon Keybord",
+      "price": "1099",
+      "category": "Computer Accessories",
+      "description": "It is a keyboard.",
+      "image": "https://m.media-amazon.com/images/I/610P9MPegbL._SX522_.jpg"
     }
   ],
   "cart": [
@@ -205,7 +212,7 @@
         "description": "Elegant and spacious handbag made from genuine leather.",
         "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
       },
-      "quantity": 3
+      "quantity": -25080
     },
     {
       "id": "98c4",

@@ -7,6 +7,7 @@ import { createProductLocal } from '../../redux/sclices/Product.slice'
 import { createProductAPI } from '../../redux/reducers/Product.reducer'
 import { toast } from 'react-toastify'
 import Heading from '../../components/UI/Heading'
+import SelectOption from '../../components/UI/SelectOption'
 
 const AddProduct = () => {
     const { theme } = useOutletContext()
@@ -39,7 +40,7 @@ const AddProduct = () => {
         }
     }
     return (
-        <section className={`py-2  transition-colors rounded-2xl ${theme === "dark" ? "bg-gray-900" : "bg-slate-0"}`}>
+        <section className={`py-2  transition-colors rounded-2xl ${theme === "dark" ? "bg-gray-900 shadow-2xl shadow-amber-500" : "bg-slate-0"}`}>
             <div className="max-w-6xl mx-auto px-4  flex flex-col justify-center items-center fle sm:px-6 lg:px-8">
                 <Heading first_txt="Add" second_txt="Product" description="Fill in the details below to add a new product." />
                 <form onSubmit={formHandler} className="px-6 py-8 rounded shadow-2xl flex flex-col justify-between items-center md:w-xl gap-2">
@@ -47,13 +48,14 @@ const AddProduct = () => {
                         <Input placeholder="Product Name" name="title" value={formData.title} onChange={inputHandler} />
                         <Input placeholder="Price" name="price" value={formData.price} onChange={inputHandler} />
                     </div>
-                    <div className='md:flex gap-2'>
-                        <Input placeholder="Category" name="category" value={formData.category} onChange={inputHandler} />
+                    <div className='flex-row gap-2'>
                         <Input placeholder="Description" name="description" value={formData.description} onChange={inputHandler} />
+                        <Input placeholder="ImageURL" name="image" value={formData.image} onChange={inputHandler} />
                     </div>
-                    <Input placeholder="ImageURL" name="image" value={formData.image} onChange={inputHandler} />
+                    <SelectOption state={formData.category} setState={(value) => setFormData({ ...formData, category: value })} />
                     <Button title="Add Product" color="green" type="submit" className='mt-5' />
                 </form>
+
             </div>
         </section>
     )
