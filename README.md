@@ -67,6 +67,66 @@ Use the following scripts to run or build the application:
 
 ---
 
+
+
+## 📂 Folder Structure
+
+```
+e-commerce-rtk/
+├── public/                     # Static assets (favicon, preview, etc.)
+├── server/                     # Optional backend or mock server
+├── src/
+│   ├── assets/                 # Images and static media
+│   │   ├── ProductDefaultImg.png
+│   │   └── react.svg
+│   ├── components/
+│   │   └── UI/                 # Reusable UI components
+│   │       ├── Button.jsx
+│   │       ├── Card.jsx
+│   │       ├── DeleteModal.jsx
+│   │       ├── Heading.jsx
+│   │       ├── Input.jsx
+│   │       ├── SelectOption.jsx
+│   │       ├── ErrorPage.jsx
+│   │       ├── Loader.jsx
+│   │       ├── Navbar.jsx
+│   │       └── ToggleButton.jsx
+│   ├── constants/
+│   │   └── Constants.js
+│   ├── pages/
+│   │   ├── Cart/
+│   │   │   └── CartPage.jsx
+│   │   ├── Products/
+│   │   │   ├── AddProduct.jsx
+│   │   │   ├── UpdateProduct.jsx
+│   │   │   └── ViewProduct.jsx
+│   │   └── ContactPage.jsx
+│   ├── redux/
+│   │   ├── reducers/
+│   │   │   ├── Cart.reducer.js
+│   │   │   └── Product.reducer.js
+│   │   ├── sclices/
+│   │   │   ├── Cart.slice.js
+│   │   │   └── Product.slice.js
+│   │   └── Store.js
+│   ├── routes/
+│   │   └── Router.jsx
+│   ├── utils/
+│   │   ├── ApiManager.jsx
+│   │   └── useDebouncer.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+
 ## 🤝 Contributing
 
 We welcome contributions! If you have suggestions for improving this project, please feel free to fork the repository and open a pull request.
