@@ -29,10 +29,6 @@ A robust and modern e-commerce platform built with **React** and leveraging **Re
 
 ---
 
-##📂 Folder Structure
-e-commerce-rtk/ ├── public/ # Static assets (favicon, preview, etc.) ├── server/ # Optional backend/mock server ├── src/ │ ├── assets/ # Images and static media │ │ ├── ProductDefaultImg.png │ │ └── react.svg │ ├── components/ │ │ └── UI/ # Reusable UI components │ │ ├── Button.jsx │ │ ├── Card.jsx │ │ ├── DeleteModal.jsx │ │ ├── Heading.jsx │ │ ├── Input.jsx │ │ ├── SelectOption.jsx │ │ ├── ErrorPage.jsx │ │ ├── Loader.jsx │ │ ├── Navbar.jsx │ │ └── ToggleButton.jsx │ ├── constants/ │ │ └── Constants.js # Global constants (categories, mock data) │ ├── pages/ │ │ ├── Cart/ │ │ │ └── CartPage.jsx │ │ ├── Products/ │ │ │ ├── AddProduct.jsx │ │ │ ├── UpdateProduct.jsx │ │ │ └── ViewProduct.jsx │ │ └── ContactPage.jsx │ ├── redux/ │ │ ├── reducers/ # Async thunk logic │ │ │ ├── Cart.reducer.js │ │ │ └── Product.reducer.js │ │ ├── sclices/ # Redux slices (state + reducers) │ │ │ ├── Cart.slice.js │ │ │ └── Product.slice.js │ │ └── Store.js # Redux store configuration │ ├── routes/ │ │ └── Router.jsx # App routing setup │ ├── utils/ │ │ ├── ApiManager.jsx # Axios instance for API calls │ │ └── useDebouncer.js # Custom debouncing hook │ ├── App.jsx # Main app wrapper │ ├── index.css # Tailwind base + global styles │ └── main.jsx # Entry point ├── .gitignore ├── eslint.config.js ├── index.html ├── package.json ├── package-lock.json ├── vite.config.js └── README.md
-
-
 ## 🚀 Getting Started
 
 Follow these steps to get your development environment set up.
