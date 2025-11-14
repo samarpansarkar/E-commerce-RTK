@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "Wireless Bluetooth Headphone",
-      "price": "2599",
-      "category": "Electronics",
-      "description": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
-      "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
-    },
-    {
       "id": "2",
       "title": "Smart Fitness Band 5",
       "price": "1999",
@@ -191,32 +183,15 @@
       "category": "Computer Accessories",
       "description": "It is a keyboard.",
       "image": "https://m.media-amazon.com/images/I/610P9MPegbL._SX522_.jpg"
-    }
-  ],
-  "cart": [
-    {
-      "id": "49f8",
-      "product": {
-        "id": "4",
-        "title": "Women’s Leather Handbag",
-        "price": 2999,
-        "category": "Fashion",
-        "description": "Elegant and spacious handbag made from genuine leather.",
-        "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
-      },
-      "quantity": -25080
     },
     {
-      "id": "98c4",
-      "product": {
-        "id": "1",
-        "title": "Wireless Bluetooth Headphone",
-        "price": "2599",
-        "category": "Electronics",
-        "description": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
-        "image": "https://m.media-amazon.com/images/I/61U7T1koQqL._SL1500_.jpg"
-      },
-      "quantity": 2
+      "id": "dcd9",
+      "title": "pen",
+      "price": "1122",
+      "category": "Electronics",
+      "description": "A pen",
+      "image": "asdasdasda"
     }
-  ]
+  ],
+  "cart": []
 }
